@@ -53,10 +53,7 @@ fprintf('Largest number observed in SD = %f\n', max_sd);
 figure(2);
 plot(pd);
 grid on;
-title('Κατανομή Γάμμα', 'FontSize', 14);
-set(gcf, 'Color', [1, 1, 1]);
-xlabel('Data', 'FontSize', 14);
-ylabel('PDF', 'FontSize', 14);
+title('Κατανομή Γάμμα');
 
 figure(3);
 plot(n, X);
@@ -75,21 +72,18 @@ ylabel('Autocorrelation');
 figure(5);
 imagesc(n, n, autocorrelation_m);
 axis image;
-set(gcf, 'Color', [1, 1, 1]);
-title('Αυτοσυσχέτιση του τριγωνικού κύματος (σε μορφή μητρώου)', 'FontSize', 14);
+title('Αυτοσυσχέτιση του τριγωνικού κύματος (σε μορφή μητρώου)');
 
 figure(6);
 f = linspace(-0.5, 0.5, length(spectral_density_p));
 plot(f, spectral_density_p);
 grid on;
-title('Πυκνότητα Φάσματος', 'FontSize', 14);
-xlabel('Normalized Frequency (\times\pi rad/sample)', 'FontSize', 14);
-ylabel('Power (dB)', 'FontSize', 14);
-set(gcf, 'Color', [1, 1, 1]);
+title('Πυκνότητα Φάσματος');
+xlabel('Normalized Frequency (\times\pi rad/sample)');
+ylabel('Power (dB)');
 
 figure(7);
 imagesc(spectral_density_m);
-title('Πυκνότητα Φάσματος (σε μορφή μητρώου)', 'FontSize', 14);
+title('Πυκνότητα Φάσματος (σε μορφή μητρώου)');
 axis image;
-set(gcf, 'Color', [1, 1, 1]);
 
