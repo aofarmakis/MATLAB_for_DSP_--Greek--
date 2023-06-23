@@ -1,10 +1,9 @@
-% Δημιουργία ημιτονοειδούς σήματος συχνότητας f = 1Hz, πλάτους Α = [-1, 1],
-% με fs = 500Hz και δημιουργία του αντίστοιχου γραφήματος
+% Δημιουργία ημιτονοειδούς σήματος συχνότητας πλάτους Α = [-1, 1],
+% με 500 δείγματα ανά περίοδο και δημιουργία του αντίστοιχου γραφήματος
 samples = 500;
-freq = 1;
-x = -2*samples : 1 : 2*samples;
-n = x / samples;
-y = sin(2*pi*freq*n);
+Ts = 1/samples;
+n = -2*(1/Ts):2*(1/Ts);
+y = sin(2*pi*n*Ts);
 
 figure(1);
 plot(n, y);
@@ -12,7 +11,7 @@ hold on;
 plot([min(n) max(n)], [0 0], 'black');
 plot([0 0], [(1.1*min(y)) (1.1*max(y))], 'black');
 hold off;
-xlabel('Time');
+xlabel('Samples');
 ylabel('Amplitude');
 title('Ημιτονοειδές Σήμα');
 ylim([(1.1*min(y)) (1.1*max(y))]);
