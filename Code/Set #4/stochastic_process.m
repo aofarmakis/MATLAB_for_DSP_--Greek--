@@ -85,4 +85,3 @@ figure(7);
 imagesc(spectral_density_m);
 title('Πυκνότητα Φάσματος (σε μορφή μητρώου)');
 axis image;
-
